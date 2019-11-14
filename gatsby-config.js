@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby x Tailwind x Framer Motion`,
@@ -21,6 +23,13 @@ module.exports = {
         tailwind: true, 
         whitelistPatterns: [/is-active/],
       }
+    },
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: 'sheringham-flooring-2019',
+        accessToken: process.env.PRISMIC_API_KEY,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
