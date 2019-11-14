@@ -1,6 +1,8 @@
 import React from "react"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
+import { HTMLContent } from "../components/content"
 
 const duration = 0.35
 
@@ -21,7 +23,10 @@ const item = {
   },
 }
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
+
+  const post = data.prismicHome
+
   return (
     <>
       <SEO title="Home" />
@@ -36,7 +41,7 @@ const IndexPage = () => {
           variants={item}
           transition="easeInOut"
         >
-          <p className="text-lg md:text-xl pl-3 border-l-2 border-black">An opinionated starter for Gatsby v2 with TailwindCSS, PostCSS and Framer Motion page transitions.</p>
+          <HTMLContent content={post.data.title.html} />
         </motion.div>
 
         <motion.div 
@@ -64,3 +69,16 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+query MyQuery {
+  prismicHome {
+    id
+    data {
+      title {
+        html
+      }
+    }
+  }
+}
+`
