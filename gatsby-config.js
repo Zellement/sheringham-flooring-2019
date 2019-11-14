@@ -2,9 +2,9 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby x Tailwind x Framer Motion`,
-    description: `An opinionated starter for Gatsby v2 with TailwindCSS, PostCSS and Framer Motion page transitions.`,
-    author: `@samuelgoddard`,
+    title: `Sheringham Flooring`,
+    description: `Flooring and carpet fitting in Sheringham, Cromer and North Walsham`,
+    author: `@zellenent`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
