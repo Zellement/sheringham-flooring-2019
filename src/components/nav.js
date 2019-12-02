@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { GoLinkExternal } from 'react-icons/go';
+//import { GoLinkExternal } from 'react-icons/go';
 
 const Nav = class extends React.Component {
 
