@@ -1,10 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import Nav from '../components/nav'
 import Logo from '../components/logo'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className="py-2 pl-2 md:py-16">
     
     <div className="container">
@@ -19,13 +18,5 @@ const Header = ({ siteTitle }) => (
     </div>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

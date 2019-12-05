@@ -56,7 +56,7 @@ Navigation
 .navigation-button {
 	padding: 15px;
   	@apply
-  		bg-black
+  		bg-blue-dark
   		fixed
   		top-0
   		right-0
@@ -149,9 +149,14 @@ Navigation
 
 .navigation-wrapper__link  {
   @apply
-  	text-black
+  	text-white
   	block
   	py-1
   	px-1;
+
+	  	@screen md {
+			  @apply 
+			  	text-grey-standard;
+		  }
 
 }

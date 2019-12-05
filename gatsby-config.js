@@ -5,6 +5,7 @@ module.exports = {
     title: `Sheringham Flooring`,
     description: `Flooring and carpet fitting in Sheringham, Cromer and North Walsham`,
     author: `@zellenent`,
+    phone: '01263 479 728',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
