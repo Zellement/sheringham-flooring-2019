@@ -1,6 +1,4 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-});
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
@@ -30,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-source-datocms`,
       options: {
-        apiToken: process.env.DATOCMSAPIKEY,
+        apiToken: process.env.DATO_API_KEY,
       },
     },
     `gatsby-transformer-sharp`,
