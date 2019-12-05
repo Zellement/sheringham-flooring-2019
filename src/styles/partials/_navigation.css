@@ -19,7 +19,7 @@ Navigation
 
 .navigation-wrapper {
 	@apply
-		bg-white
+		bg-blue-dark
 		fixed
 		transition
 		top-0
@@ -93,7 +93,7 @@ Navigation
 
 .navigation-button.is-active {
 	@apply
-		bg-blue-300;
+		bg-blue-dark;
 }
 
 .navigation-button.is-active .navigation-button__line-1 {
