@@ -26,10 +26,9 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: `gatsby-source-datocms`,
       options: {
-        repositoryName: 'sheringham-flooring-2019',
-        accessToken: process.env.PRISMIC_API_KEY,
+        apiToken: process.env.DATOCMSAPIKEY,
       },
     },
     `gatsby-transformer-sharp`,

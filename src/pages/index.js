@@ -25,8 +25,6 @@ const item = {
 
 const IndexPage = ({data}) => {
 
-  const post = data.prismicHome
-
   return (
     <>
       <SEO title="Home" />
@@ -41,7 +39,6 @@ const IndexPage = ({data}) => {
           variants={item}
           transition="easeInOut"
         >
-          <HTMLContent content={post.data.title.html} />
         </motion.div>
 
         <motion.div 
@@ -69,16 +66,3 @@ const IndexPage = ({data}) => {
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-query MyQuery {
-  prismicHome {
-    id
-    data {
-      title {
-        html
-      }
-    }
-  }
-}
-`
