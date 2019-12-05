@@ -5,11 +5,11 @@ import Nav from '../components/nav'
 import Logo from '../components/logo'
 
 const Header = ({ siteTitle }) => (
-  <header className="py-8 md:py-16">
+  <header className="py-2 pl-2 md:py-16">
     
     <div className="container">
-      <div className="flex flex-wrap items-center mb-4">
-        <Link className="font-bold block text-lg md:text-xl inline-block" to="/">
+      <div className="flex flex-wrap items-start mb-4">
+        <Link to="/">
           <Logo />
         </Link>
       </div>

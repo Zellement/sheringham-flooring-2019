@@ -32,7 +32,7 @@ const IndexPage = () => {
         className="container"
       >
         <motion.div 
-          className="content"
+          className="px-8"
           variants={item}
           transition="easeInOut"
         >
