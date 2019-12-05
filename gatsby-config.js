@@ -29,7 +29,7 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: 'sheringham-flooring-2019',
-        accessToken: process.env.PRISMIC_API_KEY,
+        accessToken: 'MC5YYzJfQVJFQUFDSUFHcXQw.H2Dvv70pY3tCfe-_vSTvv70zbu-_ve-_ve-_ve-_ve-_vQVyTO-_ve-_ve-_vVcR77-977-9du-_ve-_ve-_vQ',
       },
     },
     `gatsby-transformer-sharp`,
