@@ -26,6 +26,9 @@ const Nav = class extends React.Component {
             <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/">Carpets</Link>
           </li>
           <li>
+            <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/carpet-fitting">Carpet Fitting</Link>
+          </li>
+          <li>
             <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/vinyl-flooring/">Vinyl</Link>
           </li>
           <li>
