@@ -41,8 +41,8 @@ const ServicePage = ({data}) => {
           variants={item}
           transition="easeInOut"
         >
-          {post.pageName}
-          
+          <h1>{post.pageName}</h1>
+
         </motion.div>
 
         <motion.div 
