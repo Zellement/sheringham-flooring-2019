@@ -1,6 +1,8 @@
 import React from "react"
-import SEO from "../../components/seo"
+import { graphql } from "gatsby"
+import SEO from "../components/seo"
 import { motion } from 'framer-motion'
+import { HTMLContent } from "../components/content"
 
 const duration = 0.35
 
@@ -21,7 +23,10 @@ const item = {
   },
 }
 
-const IndexPage = () => {
+const ServicePage = ({data}) => {
+
+  const post = data.datoCmsServicePage
+
   return (
     <>
       <SEO title="Home" />
@@ -32,11 +37,12 @@ const IndexPage = () => {
         className="container"
       >
         <motion.div 
-          className="px-8"
+          className="content"
           variants={item}
           transition="easeInOut"
         >
-          <p className="text-lg md:text-xl pl-3 border-l-2 border-black">An opinionated starter for Gatsby v2 with TailwindCSS, PostCSS and Framer Motion page transitions.</p>
+          {post.pageName}
+          
         </motion.div>
 
         <motion.div 
@@ -63,4 +69,13 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default ServicePage
+
+export const query = graphql`
+  query($slug: String!) {
+    datoCmsServicePage(slug: {eq: $slug}) {
+      pageName
+    }
+  }
+  
+`
