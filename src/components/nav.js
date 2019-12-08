@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-//import { GoLinkExternal } from 'react-icons/go';
 
 const Nav = class extends React.Component {
 
@@ -52,10 +51,10 @@ const Nav = class extends React.Component {
               <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/wood-flooring/">Wood</Link>
             </li>
             <li>
-              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/wetroom/">Wetroom</Link>
+              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/wetroom-flooring/">Wetroom</Link>
             </li>
             <li>
-              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/commercial/">Commercial</Link>
+              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/commercial-flooring/">Commercial</Link>
             </li>
             <li>
               <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/hints-tips/">Hints &amp; Tips</Link>
@@ -71,7 +70,7 @@ const Nav = class extends React.Component {
             </li>
           </ul>
         </div>
-        <div className={`${burgerActive} navigation-button`} onClick={this.toggleMenu}>
+        <div role="button" tabIndex="0" className={`${burgerActive} navigation-button`} onClick={this.toggleMenu} onKeyDown={this.toggleMenu}>
           <div className={`navigation-button__inside ${burgerActive}`}>
             <span className="navigation-button__lines navigation-button__line-1 left-0"></span>
             <span className="navigation-button__lines navigation-button__line-2 left-0 mt-2"></span>

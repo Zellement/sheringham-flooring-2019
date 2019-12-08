@@ -151,13 +151,18 @@ Navigation
   @apply
   	text-white
   	block
-  	py-1
+	py-1
+	transition
   	px-1;
 
-	  	@screen lg {
-			  @apply 
-			  	text-grey-standard;
-		  }
+	@screen lg {
+		@apply 
+		text-grey-standard;
+	}
+
+	&:hover {
+		@apply text-blue-mid;
+	}
 
 }
 
@@ -172,11 +177,15 @@ Navigation
 		pl-4;
 	@screen lg {
 		@apply
+		border-l-2
+		border-blue-mid
+		border-solid
 		bg-white
 			absolute
 			hidden
 			top-0
 			mt-8
+			py-4
 			left-0
 			w-64;
 	}

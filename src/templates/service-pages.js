@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
-import { HTMLContent } from "../components/content"
+// import { HTMLContent } from "../components/content"
 
 const duration = 0.35
 

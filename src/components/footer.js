@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
-import Nav from '../components/nav'
-import Logo from '../components/logo'
+// import { Link } from "gatsby"
+// import Nav from '../components/nav'
+// import Logo from '../components/logo'
 import Phone from '../components/phone'
 
 const Header = () => (
