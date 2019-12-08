@@ -36,13 +36,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `sheringham-flooring`,
+        short_name: `sheringhamflooring`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#26486E`,
+        theme_color: `#F8F4B3`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
   ],
