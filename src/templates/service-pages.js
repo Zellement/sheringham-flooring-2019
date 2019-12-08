@@ -41,7 +41,8 @@ const ServicePage = ({data}) => {
           variants={item}
           transition="easeInOut"
         >
-          <h1>{post.pageName}</h1>
+        <h1>{post.heroBold}</h1>
+          <h2>{post.heroRegular}</h2>
 
         </motion.div>
 
@@ -75,6 +76,8 @@ export const query = graphql`
   query($slug: String!) {
     datoCmsServicePage(slug: {eq: $slug}) {
       pageName
+      heroBold
+      heroRegular
     }
   }
   
