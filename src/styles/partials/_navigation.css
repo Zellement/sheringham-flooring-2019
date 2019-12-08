@@ -31,7 +31,7 @@ Navigation
 
 		transform: translateX(-200%);
 
-		@screen md {
+		@screen lg {
 			@apply
 				bg-transparent
 				h-auto
@@ -66,7 +66,7 @@ Navigation
   		z-10
   		cursor-pointer;
 
-	@screen md {
+	@screen lg {
 		@apply hidden;
 	}
 }
@@ -140,7 +140,7 @@ Navigation
 .navigation-wrapper__list-item  {
   margin: 3px 0;
 
-  @screen md {
+  @screen lg {
     @apply
     	mx-1
     	inline-block;
@@ -154,9 +154,37 @@ Navigation
   	py-1
   	px-1;
 
-	  	@screen md {
+	  	@screen lg {
 			  @apply 
 			  	text-grey-standard;
 		  }
 
+}
+
+.navigation-wrapper__link:hover + .subnav {
+	@apply 
+		visible
+		block;
+}
+
+.subnav {
+	@apply
+		pl-4;
+	@screen lg {
+		@apply
+		bg-white
+			absolute
+			hidden
+			top-0
+			mt-8
+			left-0
+			w-64;
+	}
+
+	&:hover {
+		@apply 
+			visible
+			block;
+
+	}
 }

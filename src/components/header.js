@@ -6,7 +6,7 @@ import Phone from '../components/phone'
 import { FaPhone } from "react-icons/fa";
 
 const Header = () => (
-  <header className="py-2 pl-2 md:py-8">
+  <header className="py-2 pl-2 md:py-8 md:px-2">
     
     <div className="container">
       <div className="flex flex-col md:flex-row items-start mb-4 justify-between">
@@ -14,11 +14,11 @@ const Header = () => (
           <Logo />
         </Link>
         <div className="text-center flex md:text-right self-center pt-4 md:p-0">
-          <div className="md:pr-4 text-blue-mid">
+          <div className="md:mr-12 md:pr-4 lg:mr-0 text-blue-mid">
             <span className="block sm:inline md:block">Open Monday - Friday 09:00 - 17:00</span>
             &nbsp;Call for a <span className="font-bold">free</span> estimate
           </div>
-          <Phone classes="hidden md:block bg-blue-dark rounded-lg" calltag={<FaPhone className="inline" />} linkClasses="text-xl text-white px-4 py-2" />
+          <Phone classes="hidden lg:block bg-blue-dark rounded-lg" calltag={<FaPhone className="inline" />} linkClasses="mt-1 lg:mt-0 lg:text-xl text-white px-4 py-2" />
         </div>
       </div>
 
