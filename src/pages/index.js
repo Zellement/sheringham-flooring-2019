@@ -2,6 +2,7 @@ import React from "react"
 // import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
+import Img from "gatsby-image"
 // import { HTMLContent } from "../components/content"
 
 const duration = 0.35
@@ -25,6 +26,8 @@ const item = {
 
 const IndexPage = ({data}) => {
 
+  const post = data.datoCmsHomePage
+
   return (
     <>
       <SEO title="Home" />
@@ -39,6 +42,12 @@ const IndexPage = ({data}) => {
           variants={item}
           transition="easeInOut"
         >
+          <h1>{post.heroBold}</h1>
+          <h2>{post.heroRegular}</h2>
+          <h3>{post.heroSmall}</h3>
+
+          <Img fluid={post.mainHeroImage.fluid} />
+
         </motion.div>
 
         <motion.div 
@@ -66,3 +75,19 @@ const IndexPage = ({data}) => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+query MyQuery {
+  datoCmsHomePage {
+    heroRegular
+    heroBold
+    heroSmall
+    mainHeroImage {
+      fluid(maxHeight: 200, maxWidth: 1800) {
+        ...GatsbyDatoCmsFluid
+      }
+    }
+  }
+}
+
+`
