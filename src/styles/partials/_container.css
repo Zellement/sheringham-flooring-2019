@@ -4,3 +4,8 @@
 
     max-width: theme('screens.xl');
 }
+
+.diagonal-stripes-grey {
+    background-image: linear-gradient(45deg, #ffffff 47.62%, #cccccc 47.62%, #cccccc 50%, #ffffff 50%, #ffffff 97.62%, #cccccc 97.62%, #cccccc 100%);
+    background-size: 29.70px 29.70px;
+}

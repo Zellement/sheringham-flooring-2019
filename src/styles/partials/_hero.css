@@ -1,0 +1,13 @@
+
+
+.hero {
+    &__bold {
+      @apply my-1 text-2xl text-blue-dark font-bold leading-tight;
+    }
+    &__regular {
+      @apply my-1 text-2xl text-blue-dark leading-tight;
+    }
+    &__small {
+      @apply my-1 text-blue-mid leading-tight;
+    }
+  }
