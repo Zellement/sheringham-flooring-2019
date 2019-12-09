@@ -22,7 +22,7 @@ const Nav = class extends React.Component {
               <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/">Home</Link>
             </li>
             <li className="relative">
-              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/">Carpets</Link>
+              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/" getProps={({ isPartiallyCurrent }) => { return isPartiallyCurrent ? { className: "navigation-wrapper__link is-active" }  : null }}>Carpets</Link>
               <ul className="subnav">
                 <li>
                   <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/carpet-fitting">Carpet Fitting</Link>
@@ -33,7 +33,7 @@ const Nav = class extends React.Component {
               </ul>
             </li>
             <li className="relative">
-              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/vinyl-flooring/">Vinyl</Link>
+              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/vinyl-flooring/" getProps={({ isPartiallyCurrent }) => { return isPartiallyCurrent ? { className: "navigation-wrapper__link is-active" }  : null }}>Vinyl</Link>
               <ul className="subnav">
                 <li>
                   <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/vinyl-flooring/vinyl-cushion-flooring">Vinyl Cushion Flooring

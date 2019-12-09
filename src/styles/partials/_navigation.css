@@ -157,7 +157,8 @@ Navigation
 
 	@screen lg {
 		@apply 
-		text-grey-standard;
+		text-grey-standard
+		border-b-2 border-solid border-white;
 	}
 
 	&:hover {
@@ -170,6 +171,10 @@ Navigation
 	@apply 
 		visible
 		block;
+}
+
+.navigation-wrapper__link.is-active {
+	@apply text-blue-dark border-blue-mid;
 }
 
 .subnav {
