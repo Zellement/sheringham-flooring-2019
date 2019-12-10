@@ -1,20 +1,17 @@
 
 
 .hero {
-    &__bold {
-      @apply my-1 text-2xl text-blue-dark font-bold leading-tight;
-    }
-    &__regular {
+    &__heading {
       @apply my-1 text-2xl text-blue-dark leading-tight;
     }
+    &__bold {
+      @apply font-bold block;
+    }
     &__small {
-      @apply my-1 text-blue-mid leading-tight;
+      @apply my-1 text-blue-mid leading-tight max-w-xl;
     }
     @screen lg {
-      &__bold {
-        @apply text-3xl;
-      }
-      &__regular {
+      &__heading {
         @apply text-3xl;
       }
       &__small {
@@ -22,11 +19,11 @@
       }
     }
     @screen xl {
-      &__bold {
-        @apply text-4xl;
+      &__heading {
+        @apply text-5xl;
       }
-      &__regular {
-        @apply text-4xl;
+      &__bold {
+        @apply inline;
       }
       &__small {
         @apply text-xl;

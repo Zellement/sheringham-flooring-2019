@@ -7,12 +7,14 @@ const Hero = ({ heroBold, heroRegular, heroSmall, mainImg }) => {
         <>
             <div className="flex flex-col md:flex-row diagonal-stripes-grey">
 
-                <div className="text-center m-auto p-8 md:text-left md:w-1/2 flex-1 justify-center">
+                <div className="text-center flex-1 m-auto p-8 md:text-left md:w-1/2 lg:p-12 xl:p-16">
 
                     <div className="flex flex-col m-auto self-center">
 
-                        <p className="hero__bold">{heroBold}</p>
-                        <p className="hero__regular">{heroRegular}</p>
+                        <p className="hero__heading">
+                            <span className="hero__bold">{heroBold} </span>
+                            <span className="hero__regular">{heroRegular}</span>
+                        </p>
                         <p className="hero__small">{heroSmall}</p>
 
                     </div>
