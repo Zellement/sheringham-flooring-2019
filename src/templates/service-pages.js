@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
 // import { HTMLContent } from "../components/content"
+import Hero from "../components/hero"
 
 const duration = 0.35
 
@@ -34,15 +35,20 @@ const ServicePage = ({data}) => {
         variants={container}
         initial="hidden" 
         animate="visible"
-        className="container"
+        className=""
       >
         <motion.div 
           className="content"
           variants={item}
           transition="easeInOut"
         >
-        <h1>{post.heroBold}</h1>
-          <h2>{post.heroRegular}</h2>
+
+        <Hero
+          heroBold={post.heroBold}
+          heroRegular={post.heroRegular}
+          heroSmall={post.heroSmall}
+          mainImg={post.mainHeroImage.fluid}
+        />
 
         </motion.div>
 
@@ -78,6 +84,11 @@ export const query = graphql`
       pageName
       heroBold
       heroRegular
+      mainHeroImage {
+        fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
+          ...GatsbyDatoCmsFluid_tracedSVG
+        }
+      }
     }
   }
   
