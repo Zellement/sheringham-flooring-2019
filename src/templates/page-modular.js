@@ -26,7 +26,7 @@ const item = {
 
 const ServicePage = ({data}) => {
 
-  const post = data.datoCmsServicePage
+  const post = data.datoCmsPageModular
 
   return (
     <>
@@ -80,7 +80,7 @@ export default ServicePage
 
 export const query = graphql`
   query($slug: String!) {
-    datoCmsServicePage(slug: {eq: $slug}) {
+    datoCmsPageModular(slug: {eq: $slug}) {
       pageName
       heroBold
       heroRegular
