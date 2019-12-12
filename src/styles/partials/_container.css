@@ -6,6 +6,5 @@
 }
 
 .diagonal-stripes-grey {
-    background-image: linear-gradient(135deg, #ffffff 41.67%, #eeeeee 41.67%, #eeeeee 50%, #ffffff 50%, #ffffff 91.67%, #eeeeee 91.67%, #eeeeee 100%);
-    background-size: 8.49px 8.49px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIAIYGhpKMRJSB1J0/vz5Z3gVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQDJcyS4U9p1UQAAAABJRU5ErkJggg==")
 }

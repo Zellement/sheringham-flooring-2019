@@ -29,6 +29,9 @@ module.exports = {
       }  
     })
   ],
+  variants: {
+    margin: ['responsive', 'hover', 'focus'],
+  },
   corePlugins: {
     container: false
   }
