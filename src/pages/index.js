@@ -80,7 +80,7 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="container"
+          className="my-10 container content p-6"
           variants={item}
           transition="easeInOut"
         >

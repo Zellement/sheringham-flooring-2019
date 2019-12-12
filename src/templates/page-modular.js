@@ -61,7 +61,7 @@ const ServicePage = ({data}) => {
         </motion.div>
 
         <motion.div 
-          className="content"
+          className="container"
           variants={item}
           transition="easeInOut"
         >
