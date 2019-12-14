@@ -65,27 +65,39 @@ const IndexPage = ({ data }) => {
 
           <div className="container flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
 
-          {post.buckets.map(bucketData => (
+            {post.buckets.map(bucketData => (
 
-            <Link className="flex flex-col p-6 diagonal-stripes-grey block sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 lg:hover:-mt-16 transition" to={bucketData.link.slug}>
+              <Link key={bucketData.id} className="flex flex-col p-6 diagonal-stripes-grey block sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 lg:hover:-mt-16 transition" to={bucketData.link.slug}>
 
-              <Img className="w-full" fluid={bucketData.image.fluid} />
-              <span className="text-2xl text-blue-dark font-bold text-right sm:text-white lg:text-lg xl:text-2xl">{bucketData.title} &raquo;</span>
+                <Img className="w-full" fluid={bucketData.image.fluid} />
+                <span className="text-2xl text-blue-dark font-bold text-right sm:text-white lg:text-lg xl:text-2xl">{bucketData.title} &raquo;</span>
 
-            </Link>
-          ))}
-          
+              </Link>
+            ))}
+
           </div>
 
         </motion.div>
 
         <motion.div
-          className="my-10 container content p-6"
+          className="my-10 content"
           variants={item}
           transition="easeInOut"
         >
-          
-          <HTMLContent content={post.copy} />
+
+          <div className="relative overflow-hidden">
+
+            <div className="diagonal-stripes-grey -z-10 absolute h-full mt-48 w-full lg:w-3/5 lg:mt-0 lg:right-0"></div>
+
+            <div className="container flex flex-col lg:flex-row">
+
+              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2" content={post.copy} />
+
+              <Img className="w-full lg:w-1/2 lg:my-8" fluid={post.copyImage.fluid} />
+
+            </div>
+
+          </div>
 
         </motion.div>
       </motion.section>
@@ -117,6 +129,11 @@ query MyQuery {
     }
     mainHeroImage {
       fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
+        ...GatsbyDatoCmsFluid_tracedSVG
+      }
+    }
+    copyImage {
+      fluid(imgixParams: {h: "500", w: "600", fit: "crop"}) {
         ...GatsbyDatoCmsFluid_tracedSVG
       }
     }
