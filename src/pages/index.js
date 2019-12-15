@@ -1,11 +1,11 @@
 import React from "react"
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
 import Img from "gatsby-image"
 import { Link } from "gatsby"
-// import { HTMLContent } from "../components/content"
 import Hero from "../components/hero"
+import WhyChooseUs from "../components/why-choose"
 import { HTMLContent } from "../components/content"
 
 const duration = 0.35
@@ -54,6 +54,16 @@ const IndexPage = ({ data }) => {
             heroSmall={post.heroSmall}
             mainImg={post.mainHeroImage.fluid}
           />
+
+        </motion.div>
+
+        <motion.div
+          className="relative"
+          variants={item}
+          transition="easeInOut"
+        >
+
+          <WhyChooseUs />
 
         </motion.div>
 
