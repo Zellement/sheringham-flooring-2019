@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ( {containerClass} ) => {
   const data = useStaticQuery(graphql`
   query WhyChooseQuery {
     allDatoCmsWhyChoose {
@@ -29,13 +29,17 @@ const WhyChooseUs = () => {
         
         {data.allDatoCmsWhyChoose.edges.map(whyChooseData => (
 
-            <div key={whyChooseData.node.id}>
+            <div className={"p-8 flex flex-col " + containerClass} key={whyChooseData.node.id}>
 
                 {whyChooseData.node.reasons.map(reasonData => (
 
-                    <div key={reasonData.id}>
+                    <div className="text-center py-4 px-2" key={reasonData.id}>
                         
-                        {reasonData.title}
+                        <div className={reasonData.backgroundClass + " w-16 p-4 rounded-lg block mx-auto mb-3"}>
+                            <img className="w-full" src={reasonData.icon.url} />
+                        </div>
+                        <span className="block text-xl font-bold text-blue-dark">{reasonData.title}</span>
+                        <span className="block text-lg text-blue-dark">{reasonData.blurb}</span>
                         
                     </div>
 

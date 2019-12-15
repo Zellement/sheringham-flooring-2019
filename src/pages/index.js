@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
           transition="easeInOut"
         >
 
-          <WhyChooseUs />
+          <WhyChooseUs containerClass="md:flex-row" />
 
         </motion.div>
 

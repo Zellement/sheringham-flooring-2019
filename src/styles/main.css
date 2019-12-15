@@ -12,6 +12,7 @@
 @import './partials/_container.css';
 @import './partials/_typography.css';
 @import './partials/_navigation.css';
+@import './partials/_custom.css';
 @import './partials/_hero.css';
 
 /* Tailwind Utils */

@@ -1,0 +1,11 @@
+.diagonal-stripes-grey {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVQoU2NkIAIYGhpKMRJSB1J0/vz5Z3gVwhSBDMOpEFkRToXoirAqxKYIQyEuRSgK8SmCKySkCKyQGEUghQDJcyS4U9p1UQAAAABJRU5ErkJggg==")
+}
+
+.gradient-blue {
+    background: linear-gradient(180deg, #3E79B8 0%, #36689D 100%), #386DA6;
+}
+
+.gradient-yellow {
+    background: linear-gradient(180deg, #F8F4B3 0%, #E3DF9B 100%), #3F7ABA;
+}
