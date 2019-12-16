@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
 
             {post.buckets.map(bucketData => (
 
-              <Link key={bucketData.id} className="flex flex-col p-6 diagonal-stripes-grey block sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 lg:hover:-mt-16 transition" to={bucketData.link.slug}>
+              <Link key={bucketData.id} className="flex flex-col p-6 diagonal-stripes-grey block sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 lg:hover:-mt-16 transition" to={bucketData.link}>
 
                 <Img className="w-full" fluid={bucketData.image.fluid} />
                 <span className="text-2xl text-blue-dark font-bold text-right sm:text-white lg:text-lg xl:text-2xl">{bucketData.title} &raquo;</span>
@@ -101,7 +101,7 @@ const IndexPage = ({ data }) => {
 
             <div className="container flex flex-col lg:flex-row">
 
-              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2" content={post.copy} />
+              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8" content={post.copy} />
 
               <Img className="w-full lg:w-1/2 lg:my-8" fluid={post.copyImage.fluid} />
 
@@ -127,10 +127,7 @@ query MyQuery {
     buckets {
       id
       title
-      link {
-        id
-        slug
-      }
+      link
       image {
         fluid(imgixParams: {h: "280", w: "350"}) {
           ...GatsbyDatoCmsFluid_tracedSVG
