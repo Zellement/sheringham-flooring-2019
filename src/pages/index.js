@@ -110,6 +110,25 @@ const IndexPage = ({ data }) => {
           </div>
 
         </motion.div>
+
+        <motion.div
+          className="container"
+          variants={item}
+          transition="easeInOut"
+        >
+
+          <p>A selection of the brands we’re proud to use...</p>
+
+          {post.logos.map(logoData => (
+
+            <>
+            <Img className="w-full" fixed={logoData.fixed} />
+            </>
+
+          ))}
+
+        </motion.div>
+
       </motion.section>
     </>
   )
@@ -124,6 +143,11 @@ query MyQuery {
     heroBold
     heroSmall
     copy
+    logos {
+      fixed(imgixParams: {h: "50"}) {
+        ...GatsbyDatoCmsFixed_tracedSVG
+      }
+    }
     buckets {
       id
       title
