@@ -27,16 +27,20 @@ const Footer = () => {
     <>
       <footer className="bg-blue-dark text-blue-mid mt-6 p-10 pb-20 md:py-16">
 
-        <p className="mb-4">
-          <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.phone}>T: {data.site.siteMetadata.phone}</a><br />
-          <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.phone}>M: {data.site.siteMetadata.mobile}</a>
-        </p>
+        <div className="container">
 
-        <p className="mb-4">A: {data.site.siteMetadata.address}</p>
+          <p className="mb-4">
+            <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.phone}>T: {data.site.siteMetadata.phone}</a><br />
+            <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.phone}>M: {data.site.siteMetadata.mobile}</a>
+          </p>
 
-        <p className="mb-4">E: <a href={"mailto:" + data.site.siteMetadata.email} rel="nofollow, noindex">{data.site.siteMetadata.email}</a></p>
+          <p className="mb-4">A: {data.site.siteMetadata.address}</p>
 
-        <p><span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> {getYear + " " + data.site.siteMetadata.title}</p>
+          <p className="mb-4">E: <a href={"mailto:" + data.site.siteMetadata.email} rel="nofollow, noindex">{data.site.siteMetadata.email}</a></p>
+
+          <p><span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> {getYear + " " + data.site.siteMetadata.title}</p>
+
+        </div>
 
       </footer>
 
