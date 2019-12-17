@@ -118,9 +118,9 @@ const IndexPage = ({ data }) => {
           transition="easeInOut"
         >
 
-          <p className="text-center text-blue-dark mb-4 lg:text-left lg:w-1/5 lg:text-xl">A selection of the brands we’re proud to use...</p>
+          <p className="text-center text-blue-dark mb-4 lg:text-left lg:w-3/12 lg:text-2xl">A selection of the brands we’re proud to use...</p>
 
-          <div className="lg:w-4/5">
+          <div className="lg:w-9/12 lg:my-auto my-auto">
             <LogoCarousel 
               images={post.logos}
             />

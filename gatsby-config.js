@@ -3,9 +3,12 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `Sheringham Flooring`,
-    description: `Flooring and carpet fitting in Sheringham, Cromer and North Walsham`,
+    description: `Flooring and carpet fitting in Sheringham, Cromer, Fakenham and North Walsham`,
     author: `@Zellenent`,
     phone: '01263 479 728',
+    mobile: '07760 478 192',
+    address: 'Unit 31, Weybourne Road Industrial Est, Weybourne Road, Sheringham, Norfolk, NR26 8AF',
+    email: 'info@sheringhamflooring.com',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
