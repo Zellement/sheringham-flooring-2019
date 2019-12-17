@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Sam Goddard <hello@samgoddard.co.uk>",
   "dependencies": {
+    "embla-carousel-react": "^1.2.7",
     "framer-motion": "^1.6.17",
     "gatsby": "^2.18.7",
     "gatsby-background-image": "^0.9.11",

@@ -7,6 +7,7 @@ import { Link } from "gatsby"
 import Hero from "../components/hero"
 import WhyChooseUs from "../components/why-choose"
 import { HTMLContent } from "../components/content"
+import LogoCarousel from "../components/logo-carousel"
 
 const duration = 0.35
 
@@ -99,9 +100,9 @@ const IndexPage = ({ data }) => {
 
             <div className="diagonal-stripes-grey -z-10 absolute h-full mt-48 w-full lg:w-3/5 lg:mt-0 lg:right-0"></div>
 
-            <div className="container flex flex-col lg:flex-row">
+            <div className="container flex flex-col lg:flex-row lg:justify-between">
 
-              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8" content={post.copy} />
+              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8 lg:m-0" content={post.copy} />
 
               <Img className="w-full lg:w-1/2 lg:my-8" fluid={post.copyImage.fluid} />
 
@@ -117,15 +118,11 @@ const IndexPage = ({ data }) => {
           transition="easeInOut"
         >
 
-          <p>A selection of the brands we’re proud to use...</p>
+          <p className="text-center text-md text-blue-dark mb-4 font-bold">A selection of the brands we’re proud to use...</p>
 
-          {post.logos.map(logoData => (
-
-            <>
-            <Img className="w-full" fixed={logoData.fixed} />
-            </>
-
-          ))}
+          <LogoCarousel 
+            images={post.logos}
+          />
 
         </motion.div>
 
@@ -144,7 +141,7 @@ query MyQuery {
     heroSmall
     copy
     logos {
-      fixed(imgixParams: {h: "50"}) {
+      fixed(imgixParams: {h: "30", w: "100"}) {
         ...GatsbyDatoCmsFixed_tracedSVG
       }
     }
