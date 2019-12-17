@@ -23,6 +23,7 @@ module.exports = {
         printRejected: true,
         tailwind: true, 
         whitelistPatterns: [/is-active/],
+        whitelist: ['gradient-yellow', 'gradient-blue']
       }
     },
     {

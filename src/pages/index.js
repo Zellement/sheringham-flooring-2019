@@ -128,6 +128,16 @@ const IndexPage = ({ data }) => {
 
         </motion.div>
 
+        <motion.div
+          className="container lg:flex"
+          variants={item}
+          transition="easeInOut"
+        >
+
+          Map here
+
+        </motion.div>
+
       </motion.section>
     </>
   )
