@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 import Hero from "../components/hero"
 import WhyChooseUs from "../components/why-choose"
 import { HTMLContent } from "../components/content"
 import LogoCarousel from "../components/logo-carousel"
+import Map from "../components/map"
 
 const duration = 0.35
 
@@ -27,6 +28,7 @@ const item = {
     opacity: 1,
   },
 }
+
 
 const IndexPage = ({ data }) => {
 
@@ -69,7 +71,7 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="mt-10 sm:bg-blue-dark sm:mt-20"
+          className="sm:bg-blue-dark sm:mt-20"
           variants={item}
           transition="easeInOut"
         >
@@ -129,12 +131,12 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="container lg:flex"
+          className="relative mt-10"
           variants={item}
           transition="easeInOut"
         >
 
-          Map here
+          <Map />
 
         </motion.div>
 
