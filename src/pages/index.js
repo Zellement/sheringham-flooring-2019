@@ -102,7 +102,7 @@ const IndexPage = ({ data }) => {
 
             <div className="container flex flex-col lg:flex-row lg:justify-between">
 
-              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8 lg:m-0" content={post.copy} />
+              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8 lg:m-0 xl:px-0" content={post.copy} />
 
               <Img className="w-full lg:w-1/2 lg:my-8" fluid={post.copyImage.fluid} />
 
@@ -118,9 +118,9 @@ const IndexPage = ({ data }) => {
           transition="easeInOut"
         >
 
-          <p className="text-center text-md text-blue-dark mb-4 font-bold lg:w-2/5">A selection of the brands we’re proud to use...</p>
+          <p className="text-center text-blue-dark mb-4 lg:text-left lg:w-1/5 lg:text-xl">A selection of the brands we’re proud to use...</p>
 
-          <div className="lg:w-3/5">
+          <div className="lg:w-4/5">
             <LogoCarousel 
               images={post.logos}
             />

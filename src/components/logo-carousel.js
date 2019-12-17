@@ -72,10 +72,10 @@ class LogoCarousel extends Component {
                   align: 'start',
                   slidesToScroll: 1,
                   draggable: true,
-                  loop: true,
+                  loop: false,
                   speed: 8
                 }}
-                className="embla"
+                className="embla-viewport"
               >
                 <div className="embla__container max-w-full px-4">
                   {this.state.images.map((image, index) =>
