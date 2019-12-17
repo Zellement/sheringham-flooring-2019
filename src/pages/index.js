@@ -113,16 +113,18 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="container"
+          className="container lg:flex"
           variants={item}
           transition="easeInOut"
         >
 
-          <p className="text-center text-md text-blue-dark mb-4 font-bold">A selection of the brands we’re proud to use...</p>
+          <p className="text-center text-md text-blue-dark mb-4 font-bold lg:w-2/5">A selection of the brands we’re proud to use...</p>
 
-          <LogoCarousel 
-            images={post.logos}
-          />
+          <div className="lg:w-3/5">
+            <LogoCarousel 
+              images={post.logos}
+            />
+          </div>
 
         </motion.div>
 

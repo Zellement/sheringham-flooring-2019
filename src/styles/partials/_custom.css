@@ -9,3 +9,51 @@
 .gradient-yellow {
     background: linear-gradient(180deg, #F8F4B3 0%, #E3DF9B 100%), #3F7ABA;
 }
+
+
+/* Embla carousel */
+
+.embla {
+    @apply w-full;
+  }
+  
+  .embla__wrap {
+    @apply relative;
+  }
+  
+  .embla__viewport {
+    @apply w-full overflow-hidden;
+  }
+  
+  .embla__container {
+    @apply flex;
+  }
+  
+  .embla__slide {
+    @apply relative flex-1;
+  }
+  
+  /* .embla__slide--project {
+    flex: 0 0 100%;
+    padding-left: 0px;
+  
+    @screen md {
+      flex: 0 0 100%;
+      padding-left: 0px;
+    }
+  
+    @screen xl {
+      flex: 0 0 100%;
+      padding-left: 0px;
+    }
+  }
+   */
+  
+  /*! purgecss start ignore */
+  .embed-container {
+    position: relative; padding-bottom: 45%; height: 0; overflow: hidden;;
+  } 
+  
+  .embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  }

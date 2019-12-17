@@ -77,7 +77,7 @@ class LogoCarousel extends Component {
                 }}
                 className="embla"
               >
-                <div className="embla__container max-w-full flex flex-row justify-between px-4">
+                <div className="embla__container max-w-full px-4">
                   {this.state.images.map((image, index) =>
                     <motion.div
                       key={index}
