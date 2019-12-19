@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import EmblaCarouselReact from 'embla-carousel-react'
 import { motion } from 'framer-motion'
+import { IoIosArrowDroprightCircle, IoIosArrowDropleftCircle } from 'react-icons/io'
 
 const duration = 0.75
 
@@ -23,7 +24,7 @@ const item = {
   },
 }
 
-class LogoCarousel extends Component {
+class GalleryCarousel extends Component {
   constructor(props) {
     super(props);
 
@@ -52,18 +53,18 @@ class LogoCarousel extends Component {
             <motion.button
                   variants={item}
                   transition="easeInOut"
-                  className="absolute cursor-pointer top-0 left-0 p-1 font-bold text-xl bg-white font-serif appearance-none focus:outline-none z-10"
+                  className="absolute cursor-pointer mt-1 mr-1 top-0 left-0 p-1 font-bold text-2xl text-yellow font-serif appearance-none focus:outline-none z-10"
                   onClick={() => this.embla.scrollPrev()}
                 >
-                &larr;
+                <IoIosArrowDropleftCircle />
               </motion.button>
               <motion.button
                 variants={item}
                 transition="easeInOut"
-                className="absolute cursor-pointer top-0 right-0 2xl:-mr-6 p-1 font-bold bg-white text-xl appearance-none focus:outline-none z-10"
+                className="absolute cursor-pointer mt-1 mr-1 top-0 right-0 2xl:-mr-6 font-bold text-yellow text-2xl appearance-none focus:outline-none z-10"
                 onClick={() => this.embla.scrollNext()}
               >
-                &rarr;
+                <IoIosArrowDroprightCircle />
               </motion.button>
               <EmblaCarouselReact
                 emblaRef={c => (this.embla = c)}
@@ -77,16 +78,16 @@ class LogoCarousel extends Component {
                 }}
                 className="embla-viewport"
               >
-                <div className="embla__container max-w-full px-4">
+                <div className="embla__container max-w-full">
                   {this.state.images.map((image, index) =>
                     <motion.div
                       key={index}
                       variants={item}
                       transition="easeInOut"
-                      className="embla__slide block"
+                      className="embla__slide embla__slide--gallery block"
                     >
-                      <Img fixed={image.fixed} key={image.title} alt={image.alt} className="w-full block mb-px mx-4" />
-                      {/* <span className="text-sm text-black">{('0' + (index + 1)).slice(-2)}</span> */}
+                      <Img fluid={image.fluid} key={image.title} alt={image.alt} className="w-full block mb-px" />
+                      <span className="text-sm bg-white p-1 text-black absolute bottom-0 right-0 z-50">{('0' + (index + 1)).slice(-2)}</span>
                     </motion.div>
                   )}
                 </div>
@@ -94,19 +95,19 @@ class LogoCarousel extends Component {
             </div>
           </motion.section>
         ) : (
-          <p>Loading Reviews&hellip;</p>
+          <p>Loading images&hellip;</p>
         )}
       </>
     )
   }
 }
 
-LogoCarousel.propTypes = {
+GalleryCarousel.propTypes = {
   images: PropTypes.array,
 }
 
-LogoCarousel.defaultProps = {
+GalleryCarousel.defaultProps = {
   images: [],
 }
 
-export default LogoCarousel
+export default GalleryCarousel

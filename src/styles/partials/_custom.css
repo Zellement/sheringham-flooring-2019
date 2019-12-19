@@ -33,21 +33,21 @@
     @apply relative flex-1;
   }
   
-  /* .embla__slide--project {
+  .embla__slide--gallery {
     flex: 0 0 100%;
     padding-left: 0px;
   
-    @screen md {
-      flex: 0 0 100%;
+    /* @screen md {
+      flex: 0 0 50%;
       padding-left: 0px;
     }
   
     @screen xl {
-      flex: 0 0 100%;
+      flex: 0 0 25%;
       padding-left: 0px;
-    }
+    } */
   }
-   */
+  
   
   /*! purgecss start ignore */
   .embed-container {
