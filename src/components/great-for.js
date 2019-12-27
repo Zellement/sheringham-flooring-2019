@@ -46,7 +46,7 @@ const GreatFor = ({ chosen }) => {
                                     key={suitableForData.id}
                                     variants={item}
                                     transition="easeInOut"
-                                    className="w-1/2 p-4 text-center relative sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/10"
+                                    className="w-1/2 p-4 text-center relative sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/12"
                                 >
 
                                     <div className="absolute -z-10 opacity-25 top-1/2 bg-boxes left-1/2 bg-blue-mid w-50px h-50px"></div>
