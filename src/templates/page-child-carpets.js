@@ -118,9 +118,11 @@ export const query = graphql`
       pageName
       heroBold
       heroRegular
+      heroSmall
+      copy
       gallery {
         fluid(imgixParams: {w: "800", h: "520", fit: "crop", crop: "edges"}) {
-          ...GatsbyDatoCmsFluid_tracedSVG
+          ...GatsbyDatoCmsFluid
         }
       }
     }

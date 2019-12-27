@@ -23,7 +23,7 @@
         @apply text-5xl;
       }
       &__bold {
-        @apply inline;
+        /*@apply inline;*/
       }
       &__small {
         @apply text-xl;

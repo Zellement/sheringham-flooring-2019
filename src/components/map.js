@@ -15,6 +15,8 @@ const Map = () => {
       <div
         id="mapOverlay"
         onClick={hideDiv}
+        onKeyDown={hideDiv}
+        role="none"
         className="absolute w-full h-full gradient-blue opacity-50 cursor-pointer"
       ></div>
 
@@ -22,6 +24,7 @@ const Map = () => {
         src="https://www.google.com/maps/d/u/0/embed?mid=1UX4vosw-XYLDC5Xv47fICUQdMpBZpcjz"
         width="100%"
         height="480"
+        title="Where we've worked"
       ></iframe>
     </>
   )
