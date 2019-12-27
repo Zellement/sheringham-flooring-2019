@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
+
 import { HTMLContent } from "../components/content"
 import WhyChooseUs from "../components/why-choose"
 import Hero from "../components/hero"
@@ -34,17 +35,19 @@ const ServicePage = ({ data }) => {
 
   return (
     <>
+
       <SEO title="Home" />
+
       <motion.section
         variants={container}
         initial="hidden"
         animate="visible"
-        className=""
       >
+
         <motion.div
-          className="content"
           variants={item}
           transition="easeInOut"
+          className="my-4 lg:my-8"
         >
 
           <Hero
@@ -56,12 +59,20 @@ const ServicePage = ({ data }) => {
 
         </motion.div>
 
-        <GreatFor
-          chosen={post.suitableFor}
-        />
+        <motion.div
+          variants={item}
+          transition="easeInOut"
+          className="my-4 lg:my-8"
+        >
+
+          <GreatFor
+            chosen={post.suitableFor}
+          />
+
+        </motion.div>
 
         <motion.div
-          className="my-10 content"
+          className="my-4 lg:my-8 content"
           variants={item}
           transition="easeInOut"
         >
@@ -85,7 +96,7 @@ const ServicePage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="container lg:flex"
+          className="container lg:flex my-4 lg:my-8 p-4"
           variants={item}
           transition="easeInOut"
         >
@@ -101,7 +112,7 @@ const ServicePage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="relative mt-10"
+          className="relative my-4 lg:my-8"
           variants={item}
           transition="easeInOut"
         >

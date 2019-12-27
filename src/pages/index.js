@@ -42,11 +42,10 @@ const IndexPage = ({ data }) => {
         variants={container}
         initial="hidden"
         animate="visible"
-        className=""
       >
 
         <motion.div
-          className="relative"
+          className="my-4 lg:my-8"
           variants={item}
           transition="easeInOut"
         >
@@ -61,9 +60,9 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="relative"
           variants={item}
           transition="easeInOut"
+          className="relative my-4 lg:my-8"
         >
 
           <WhyChooseUs containerClass="md:flex-row" />
@@ -71,7 +70,7 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="sm:bg-blue-dark sm:mt-20"
+          className="sm:bg-blue-dark my-4 lg:my-8"
           variants={item}
           transition="easeInOut"
         >
@@ -93,7 +92,7 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="my-10 content"
+          className="my-4 lg:my-8 content"
           variants={item}
           transition="easeInOut"
         >
@@ -115,7 +114,7 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="container lg:flex"
+          className="container lg:flex my-4 lg:my-8"
           variants={item}
           transition="easeInOut"
         >
@@ -131,7 +130,7 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="relative mt-10"
+          className="relative my-4 lg:my-8"
           variants={item}
           transition="easeInOut"
         >

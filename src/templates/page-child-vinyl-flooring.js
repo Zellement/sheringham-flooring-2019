@@ -7,6 +7,7 @@ import WhyChooseUs from "../components/why-choose"
 import Hero from "../components/hero"
 import LogoCarousel from "../components/logo-carousel"
 import Map from "../components/map"
+import GreatFor from "../components/great-for"
 
 const duration = 0.35
 
@@ -41,9 +42,9 @@ const ServicePage = ({ data }) => {
         className=""
       >
         <motion.div
-          className="content"
           variants={item}
           transition="easeInOut"
+          className="my-4 lg:my-8"
         >
 
           <Hero
@@ -56,9 +57,21 @@ const ServicePage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="my-10 content"
           variants={item}
           transition="easeInOut"
+          className="my-4 lg:my-8"
+        >
+
+          <GreatFor
+            chosen={post.suitableFor}
+          />
+
+        </motion.div>
+
+        <motion.div
+          variants={item}
+          transition="easeInOut"
+          className="my-4 lg:my-8 content"
         >
 
           <div className="relative overflow-hidden">
@@ -80,7 +93,7 @@ const ServicePage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="container lg:flex"
+          className="container lg:flex my-4 lg:my-8 p-4"
           variants={item}
           transition="easeInOut"
         >
@@ -96,7 +109,7 @@ const ServicePage = ({ data }) => {
         </motion.div>
 
         <motion.div
-          className="relative mt-10"
+          className="relative my-4 lg:my-8"
           variants={item}
           transition="easeInOut"
         >
@@ -120,6 +133,13 @@ export const query = graphql`
       heroRegular
       heroSmall
       copy
+      suitableFor {
+        id
+        area
+        image {
+          url
+        }
+      }
       gallery {
         fluid(imgixParams: {w: "800", h: "520", fit: "crop", crop: "edges"}) {
           ...GatsbyDatoCmsFluid
