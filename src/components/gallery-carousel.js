@@ -46,34 +46,18 @@ class GalleryCarousel extends Component {
         {!this.state.isLoading ? (
           <motion.section
             variants={container}
-            initial="hidden" 
+            initial="hidden"
             animate="visible"
           >
             <div className="relative">
-            <motion.button
-                  variants={item}
-                  transition="easeInOut"
-                  className="absolute cursor-pointer mt-1 mr-1 top-0 left-0 p-1 font-bold text-2xl text-yellow font-serif appearance-none focus:outline-none z-10"
-                  onClick={() => this.embla.scrollPrev()}
-                >
-                <IoIosArrowDropleftCircle />
-              </motion.button>
-              <motion.button
-                variants={item}
-                transition="easeInOut"
-                className="absolute cursor-pointer mt-1 mr-1 top-0 right-0 2xl:-mr-6 font-bold text-yellow text-2xl appearance-none focus:outline-none z-10"
-                onClick={() => this.embla.scrollNext()}
-              >
-                <IoIosArrowDroprightCircle />
-              </motion.button>
               <EmblaCarouselReact
                 emblaRef={c => (this.embla = c)}
                 htmlTagName={`div`}
-                options={{ 
+                options={{
                   align: 'start',
                   slidesToScroll: 1,
                   draggable: true,
-                  loop: false,
+                  loop: true,
                   speed: 8
                 }}
                 className="embla-viewport"
@@ -98,11 +82,27 @@ class GalleryCarousel extends Component {
                   )}
                 </div>
               </EmblaCarouselReact>
+              <motion.button
+                variants={item}
+                transition="easeInOut"
+                className="absolute cursor-pointer mt-1 mr-1 top-0 left-0 p-1 font-bold text-2xl text-yellow font-serif appearance-none focus:outline-none z-10"
+                onClick={() => this.embla.scrollPrev()}
+              >
+                <IoIosArrowDropleftCircle />
+              </motion.button>
+              <motion.button
+                variants={item}
+                transition="easeInOut"
+                className="absolute cursor-pointer mt-1 mr-1 top-0 right-0 2xl:-mr-6 font-bold text-yellow text-2xl appearance-none focus:outline-none z-10"
+                onClick={() => this.embla.scrollNext()}
+              >
+                <IoIosArrowDroprightCircle />
+              </motion.button>
             </div>
           </motion.section>
         ) : (
-          <p>Loading images&hellip;</p>
-        )}
+            <p>Loading images&hellip;</p>
+          )}
       </>
     )
   }
