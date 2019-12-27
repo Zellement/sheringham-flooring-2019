@@ -94,7 +94,7 @@ class LogoCarousel extends Component {
             </div>
           </motion.section>
         ) : (
-          <p>Loading Reviews&hellip;</p>
+          <p>Loading logos&hellip;</p>
         )}
       </>
     )

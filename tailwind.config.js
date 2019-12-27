@@ -15,6 +15,12 @@ module.exports = {
       '-10' : -10
     },
     extend: {
+      spacing: {
+        '50px': '50px'
+      },
+      inset: {
+        '1/2': '50%'
+      },
       colors: {
         blue: {
           dark: '#26486E',

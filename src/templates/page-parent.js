@@ -53,6 +53,25 @@ const ServicePage = ({ data }) => {
             carouselImgs={post.gallery}
           />
 
+          <div className="max-w-xl">
+
+            <p className="text-center text-blue-dark mb-4 text-xl lg:text-left lg:w-3/12 lg:text-2xl">Suitable for...</p>
+
+            <div className="flex flex-row flex-wrap align-center space-around">
+
+            {post.suitableFor.map(suitableForData => (
+              <div key={suitableForData.id} className="w-1/2 p-4 text-center relative">
+                <div className="absolute -z-10 opacity-25 top-1/2 bg-boxes left-1/2 bg-blue-mid w-50px h-50px"></div>
+                <img className="w-50px h-50px opacity-50 block mx-auto" alt={suitableForData.area} src={suitableForData.image.url} />
+                <p>{suitableForData.area}</p>
+              </div>
+            ))
+            }
+
+            </div>
+
+          </div>
+
         </motion.div>
 
         <motion.div
@@ -88,7 +107,7 @@ const ServicePage = ({ data }) => {
           <p className="text-center text-blue-dark mb-4 lg:text-left lg:w-3/12 lg:text-2xl">A selection of the brands we’re proud to use...</p>
 
           <div className="lg:w-9/12 lg:my-auto my-auto">
-            <LogoCarousel 
+            <LogoCarousel
               images={post.logos}
             />
           </div>
@@ -120,6 +139,13 @@ export const query = graphql`
       heroRegular
       heroSmall
       copy
+      suitableFor {
+        id
+        area
+        image {
+          url
+        }
+      }
       logos {
         fixed(imgixParams: {h: "30", w: "100"}) {
           ...GatsbyDatoCmsFixed_tracedSVG
