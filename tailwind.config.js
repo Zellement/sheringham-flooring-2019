@@ -16,7 +16,8 @@ module.exports = {
     },
     extend: {
       spacing: {
-        '50px': '50px'
+        '50px': '50px',
+        '1/10': '10%'
       },
       inset: {
         '1/2': '50%'

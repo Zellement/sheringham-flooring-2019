@@ -7,6 +7,7 @@ import WhyChooseUs from "../components/why-choose"
 import Hero from "../components/hero"
 import LogoCarousel from "../components/logo-carousel"
 import Map from "../components/map"
+import GreatFor from "../components/great-for"
 
 const duration = 0.35
 
@@ -53,26 +54,11 @@ const ServicePage = ({ data }) => {
             carouselImgs={post.gallery}
           />
 
-          <div className="max-w-xl">
-
-            <p className="text-center text-blue-dark mb-4 text-xl lg:text-left lg:w-3/12 lg:text-2xl">Suitable for...</p>
-
-            <div className="flex flex-row flex-wrap align-center space-around">
-
-            {post.suitableFor.map(suitableForData => (
-              <div key={suitableForData.id} className="w-1/2 p-4 text-center relative">
-                <div className="absolute -z-10 opacity-25 top-1/2 bg-boxes left-1/2 bg-blue-mid w-50px h-50px"></div>
-                <img className="w-50px h-50px opacity-50 block mx-auto" alt={suitableForData.area} src={suitableForData.image.url} />
-                <p>{suitableForData.area}</p>
-              </div>
-            ))
-            }
-
-            </div>
-
-          </div>
-
         </motion.div>
+
+        <GreatFor
+          chosen={post.suitableFor}
+        />
 
         <motion.div
           className="my-10 content"
