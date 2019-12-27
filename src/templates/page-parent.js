@@ -130,33 +130,18 @@ export const query = graphql`
           ...GatsbyDatoCmsFluid
         }
       }
-      mainHeroImage {
-        fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
-          ...GatsbyDatoCmsFluid
-        }
-      }
     }
     datoCmsVinylChildPageModular(slug: {eq: $slug}) {
       pageName
       heroBold
       heroRegular
       copy
-      mainHeroImage {
-        fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
-          ...GatsbyDatoCmsFluid
-        }
-      }
     }
     datoCmsCarpetsChildPageModular(slug: {eq: $slug}) {
       pageName
       heroBold
       heroRegular
       copy
-      mainHeroImage {
-        fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
-          ...GatsbyDatoCmsFluid
-        }
-      }
     }
   }
   

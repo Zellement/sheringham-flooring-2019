@@ -25,6 +25,7 @@ const Hero = ({ heroBold, heroRegular, heroSmall, carouselImgs }) => {
 
                 <GalleryCarousel 
                     images={carouselImgs}
+                    backgroundColor="#81AEDD"
                 />
 
                 </div>

@@ -2,8 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
-// import { HTMLContent } from "../components/content"
-import Hero from "../components/hero"
+import { HTMLContent } from "../components/content"
+import WhyChooseUs from "../components/why-choose"
+import HeroCarousel from "../components/hero-carousel"
+import LogoCarousel from "../components/logo-carousel"
+import Map from "../components/map"
 
 const duration = 0.35
 
@@ -24,7 +27,7 @@ const item = {
   },
 }
 
-const ServicePage = ({data}) => {
+const ServicePage = ({ data }) => {
 
   const post = data.datoCmsVinylChildPageModular
 
@@ -33,44 +36,75 @@ const ServicePage = ({data}) => {
       <SEO title="Home" />
       <motion.section
         variants={container}
-        initial="hidden" 
+        initial="hidden"
         animate="visible"
         className=""
       >
-        <motion.div 
+        <motion.div
           className="content"
           variants={item}
           transition="easeInOut"
         >
 
-        <Hero
-          heroBold={post.heroBold}
-          heroRegular={post.heroRegular}
-          heroSmall={post.heroSmall}
-          mainImg={post.mainHeroImage.fluid}
-        />
+          <HeroCarousel
+            heroBold={post.heroBold}
+            heroRegular={post.heroRegular}
+            heroSmall={post.heroSmall}
+            carouselImgs={post.gallery}
+          />
 
         </motion.div>
 
-        <motion.div 
-          className="content"
+        <motion.div
+          className="my-10 content"
           variants={item}
           transition="easeInOut"
         >
-          <hr className="block my-8" />
+
+          <div className="relative overflow-hidden">
+
+            <div className="diagonal-stripes-grey -z-10 absolute h-full mt-48 w-full lg:w-3/5 lg:mt-0 lg:right-0"></div>
+
+            <div className="container flex flex-col lg:flex-row lg:justify-between">
+
+              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8 lg:m-0 lg:w-3/5 xl:px-0" content={post.copy} />
+
+              <div className="lg:w-2/5">
+                <WhyChooseUs containerClass="md:flex-col" />
+              </div>
+
+            </div>
+
+          </div>
+
         </motion.div>
 
-        <motion.div 
-          className="container"
+        <motion.div
+          className="container lg:flex"
           variants={item}
           transition="easeInOut"
         >
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-          <h2>Lorem ipsum dolor sit amet</h2>
-          
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="text-center text-blue-dark mb-4 lg:text-left lg:w-3/12 lg:text-2xl">A selection of the brands we’re proud to use...</p>
+
+          <div className="lg:w-9/12 lg:my-auto my-auto">
+            <LogoCarousel 
+              images={post.logos}
+            />
+          </div>
+
         </motion.div>
+
+        <motion.div
+          className="relative mt-10"
+          variants={item}
+          transition="easeInOut"
+        >
+
+          <Map />
+
+        </motion.div>
+
       </motion.section>
     </>
   )
@@ -84,7 +118,7 @@ export const query = graphql`
       pageName
       heroBold
       heroRegular
-      mainHeroImage {
+      gallery {
         fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
