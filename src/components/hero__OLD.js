@@ -1,7 +1,7 @@
 import React from "react"
-import GalleryCarousel from "../components/gallery-carousel"
+import Img from "gatsby-image"
 
-const Hero = ({ heroBold, heroRegular, heroSmall, carouselImgs }) => {
+const Hero = ({ heroBold, heroRegular, heroSmall, mainImg }) => {
 
     return (
         <>
@@ -23,10 +23,10 @@ const Hero = ({ heroBold, heroRegular, heroSmall, carouselImgs }) => {
 
                 <div className="md:w-1/2 md:flex-1 md:py-4 hero__image-container xl:py-8">
 
-                <GalleryCarousel 
-                    images={carouselImgs}
-                    backgroundColor="#81AEDD"
-                />
+                    <Img
+                        className=""
+                        fluid={mainImg}
+                    />
 
                 </div>
 

@@ -1,38 +1,82 @@
 import React from "react"
+import GalleryCarousel from "./gallery-carousel"
 import Img from "gatsby-image"
 
-const Hero = ({ heroBold, heroRegular, heroSmall, mainImg }) => {
+const Hero = ({ heroBold, heroRegular, heroSmall, carouselImgs }) => {
 
-    return (
-        <>
-            <div className="flex flex-col md:flex-row diagonal-stripes-grey">
+    if (carouselImgs.length > 1) {
 
-                <div className="text-center flex-1 m-auto p-8 md:text-left md:w-1/2 lg:p-12 xl:p-16">
+        return (
+            <>
+                <div className="flex flex-col md:flex-row diagonal-stripes-grey">
 
-                    <div className="flex flex-col m-auto self-center">
+                    <div className="text-center flex-1 m-auto p-8 md:text-left md:w-1/2 lg:p-12 xl:p-16">
 
-                        <p className="hero__heading">
-                            <span className="hero__bold">{heroBold} </span>
-                            <span className="hero__regular">{heroRegular}</span>
-                        </p>
-                        <p className="hero__small">{heroSmall}</p>
+                        <div className="flex flex-col m-auto self-center">
+
+                            <p className="hero__heading">
+                                <span className="hero__bold">{heroBold} </span>
+                                <span className="hero__regular">{heroRegular}</span>
+                            </p>
+                            <p className="hero__small">{heroSmall}</p>
+
+                        </div>
+
+                    </div>
+
+                    <div id="imageHolder" className="md:w-1/2 md:flex-1 md:py-4 hero__image-container xl:py-8">
+
+                        <GalleryCarousel
+                            images={carouselImgs}
+                        />
 
                     </div>
 
                 </div>
+            </>
 
-                <div className="md:w-1/2 md:flex-1 md:py-4 hero__image-container xl:py-8">
+        )
 
-                    <Img
-                        className=""
-                        fluid={mainImg}
-                    />
+    }
+
+    else if (carouselImgs.length === 1) {
+
+        return (
+            <>
+                <div className="flex flex-col md:flex-row diagonal-stripes-grey">
+
+                    <div className="text-center flex-1 m-auto p-8 md:text-left md:w-1/2 lg:p-12 xl:p-16">
+
+                        <div className="flex flex-col m-auto self-center">
+
+                            <p className="hero__heading">
+                                <span className="hero__bold">{heroBold} </span>
+                                <span className="hero__regular">{heroRegular}</span>
+                            </p>
+                            <p className="hero__small">{heroSmall}</p>
+
+                        </div>
+
+                    </div>
+
+                    <div id="imageHolder" className="md:w-1/2 md:flex-1 md:py-4 hero__image-container xl:py-8">
+
+                        <Img
+                            fluid={carouselImgs[0].fluid}
+                        />
+
+                    </div>
 
                 </div>
+            </>
+        )
+    }
 
-            </div>
-        </>
-    )
+    else {
+        return (
+            <><h1>Image needed!</h1></>
+        )
+    }
 }
 
 export default Hero

@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { motion } from 'framer-motion'
 import { HTMLContent } from "../components/content"
 import WhyChooseUs from "../components/why-choose"
-import HeroCarousel from "../components/hero-carousel"
+import Hero from "../components/hero"
 import LogoCarousel from "../components/logo-carousel"
 import Map from "../components/map"
 
@@ -46,7 +46,7 @@ const ServicePage = ({ data }) => {
           transition="easeInOut"
         >
 
-          <HeroCarousel
+          <Hero
             heroBold={post.heroBold}
             heroRegular={post.heroRegular}
             heroSmall={post.heroSmall}
@@ -119,7 +119,7 @@ export const query = graphql`
       heroBold
       heroRegular
       gallery {
-        fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
+        fluid(imgixParams: {w: "800", h: "520", fit: "crop", crop: "edges"}) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
       }

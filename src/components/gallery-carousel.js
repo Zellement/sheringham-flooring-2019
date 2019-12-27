@@ -86,7 +86,13 @@ class GalleryCarousel extends Component {
                       transition="easeInOut"
                       className="embla__slide embla__slide--gallery block"
                     >
-                      <Img fluid={image.fluid} key={image.title} alt={image.alt} className="w-full block mb-px" />
+                      <Img
+                        backgroundColor="#26486E"
+                        fluid={image.fluid}
+                        key={image.title}
+                        alt={image.alt}
+                        className="w-full block mb-px"
+                      />
                       <span className="text-sm bg-white p-1 text-black absolute bottom-0 right-0 z-50">{('0' + (index + 1)).slice(-2)}</span>
                     </motion.div>
                   )}

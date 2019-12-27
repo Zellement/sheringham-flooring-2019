@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 import { motion } from 'framer-motion'
 import Img from "gatsby-image"
-import Hero from "../components/hero"
 import WhyChooseUs from "../components/why-choose"
 import { HTMLContent } from "../components/content"
+import Hero from "../components/hero"
 import LogoCarousel from "../components/logo-carousel"
 import Map from "../components/map"
 
@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
             heroBold={post.heroBold}
             heroRegular={post.heroRegular}
             heroSmall={post.heroSmall}
-            mainImg={post.mainHeroImage.fluid}
+            carouselImgs={post.gallery}
           />
 
         </motion.div>
@@ -154,6 +154,11 @@ query MyQuery {
     heroBold
     heroSmall
     copy
+    gallery {
+      fluid(imgixParams: {w: "800", h: "520", fit: "crop", crop: "edges"}) {
+        ...GatsbyDatoCmsFluid_tracedSVG
+      }
+    }
     logos {
       fixed(imgixParams: {h: "30", w: "100"}) {
         ...GatsbyDatoCmsFixed_tracedSVG
@@ -167,11 +172,6 @@ query MyQuery {
         fluid(imgixParams: {h: "280", w: "350"}) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
-      }
-    }
-    mainHeroImage {
-      fluid(imgixParams: {h: "390", w: "800", fit: "crop"}) {
-        ...GatsbyDatoCmsFluid_tracedSVG
       }
     }
     copyImage {
