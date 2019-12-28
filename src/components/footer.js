@@ -1,9 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-// import { Link } from "gatsby"
-// import Nav from '../components/nav'
-// import Logo from '../components/logo'
 import Phone from "../components/phone"
+import Social from "../components/social"
 
 const Footer = () => {
 
@@ -28,6 +26,7 @@ const Footer = () => {
       <footer className="bg-blue-dark text-blue-mid mt-6 p-10 pb-20 md:py-16">
 
         <div className="container">
+          <Social />
 
           <p className="mb-4">
             <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.phone}>T: {data.site.siteMetadata.phone}</a><br />

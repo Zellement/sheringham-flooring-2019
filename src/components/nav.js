@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Social from "./social"
 
 const Nav = class extends React.Component {
 
@@ -22,7 +23,7 @@ const Nav = class extends React.Component {
               <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/">Home</Link>
             </li>
             <li className="relative">
-              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/" getProps={({ isPartiallyCurrent }) => { return isPartiallyCurrent ? { className: "navigation-wrapper__link is-active" }  : null }}>Carpets</Link>
+              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/" getProps={({ isPartiallyCurrent }) => { return isPartiallyCurrent ? { className: "navigation-wrapper__link is-active" } : null }}>Carpets</Link>
               <ul className="subnav">
                 <li>
                   <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/carpets/carpet-fitting">Carpet Fitting</Link>
@@ -33,7 +34,7 @@ const Nav = class extends React.Component {
               </ul>
             </li>
             <li className="relative">
-              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/vinyl-flooring/" getProps={({ isPartiallyCurrent }) => { return isPartiallyCurrent ? { className: "navigation-wrapper__link is-active" }  : null }}>Vinyl</Link>
+              <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/vinyl-flooring/" getProps={({ isPartiallyCurrent }) => { return isPartiallyCurrent ? { className: "navigation-wrapper__link is-active" } : null }}>Vinyl</Link>
               <ul className="subnav">
                 <li>
                   <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/vinyl-flooring/vinyl-cushion-flooring">Vinyl Cushion Flooring
@@ -69,6 +70,8 @@ const Nav = class extends React.Component {
               <Link className="navigation-wrapper__link" onClick={this.toggleMenu} activeClassName="is-active" to="/contact-us/">Contact Us</Link>
             </li>
           </ul>
+
+          <Social />
         </div>
         <div role="button" tabIndex="0" className={`${burgerActive} navigation-button`} onClick={this.toggleMenu} onKeyDown={this.toggleMenu}>
           <div className={`navigation-button__inside ${burgerActive}`}>

@@ -9,6 +9,7 @@ import { HTMLContent } from "../components/content"
 import Hero from "../components/hero"
 import LogoCarousel from "../components/logo-carousel"
 import Map from "../components/map"
+import Social from "../components/social"
 
 const duration = 0.35
 
