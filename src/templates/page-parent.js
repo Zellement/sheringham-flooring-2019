@@ -142,18 +142,6 @@ export const query = graphql`
         }
       }
     }
-    datoCmsVinylChildPageModular(slug: {eq: $slug}) {
-      pageName
-      heroBold
-      heroRegular
-      copy
-    }
-    datoCmsCarpetsChildPageModular(slug: {eq: $slug}) {
-      pageName
-      heroBold
-      heroRegular
-      copy
-    }
   }
   
 `
