@@ -19,13 +19,13 @@ Navigation
 
 .navigation-wrapper {
 	@apply
-		bg-blue-dark
+		bg-blue-mid
 		fixed
 		transition
 		top-0
 		left-0
 		p-6
-		z-10
+		z-30
 		w-full
 		h-screen;
 
@@ -63,7 +63,7 @@ Navigation
   		w-12
   		h-12
   		block
-  		z-10
+  		z-50
   		cursor-pointer;
 
 	@screen lg {

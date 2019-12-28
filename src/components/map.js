@@ -17,7 +17,7 @@ const Map = () => {
         onClick={hideDiv}
         onKeyDown={hideDiv}
         role="none"
-        className="absolute w-full h-full gradient-blue opacity-50 cursor-pointer"
+        className="hidden lg:block absolute w-full h-full gradient-blue opacity-50 cursor-pointer"
       ></div>
 
       <iframe
