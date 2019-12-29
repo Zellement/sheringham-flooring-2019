@@ -19,20 +19,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATO_API_KEY,
+      },
+    },
     `gatsby-plugin-postcss`,
     { 
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true,
         tailwind: true, 
-        whitelist: ['gradient-yellow', 'gradient-blue', 'is-active']
+        whitelistPatterns: [/is-active/],
+        whitelist: ['gradient-yellow', 'gradient-blue'],
       }
-    },
-    {
-      resolve: `gatsby-source-datocms`,
-      options: {
-        apiToken: process.env.DATO_API_KEY,
-      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
