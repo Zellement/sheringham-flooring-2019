@@ -9,7 +9,6 @@ import { HTMLContent } from "../components/content"
 import Hero from "../components/hero"
 import LogoCarousel from "../components/logo-carousel"
 import Map from "../components/map"
-import Social from "../components/social"
 
 const duration = 0.35
 
@@ -37,7 +36,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <SEO title="Carpets, Wooden Flooring, Vinyl Flooring Cromer, Fakenham, North Walsham" />
+      <SEO
+        title={post.seo.title}
+        description={post.seo.description}
+      />
 
       <motion.section
         variants={container}
@@ -142,6 +144,10 @@ query MyQuery {
     heroBold
     heroSmall
     copy
+    seo {
+      title
+      description
+    }
     gallery {
       fluid(imgixParams: {w: "800", h: "520", fit: "crop", crop: "edges"}) {
         ...GatsbyDatoCmsFluid_tracedSVG

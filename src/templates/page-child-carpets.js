@@ -34,7 +34,12 @@ const ServicePage = ({ data }) => {
 
   return (
     <>
-      <SEO title="Home" />
+
+      <SEO
+        title={post.seo.title}
+        description={post.seo.description}
+      />
+      
       <motion.section
         variants={container}
         initial="hidden"
@@ -121,6 +126,10 @@ export const query = graphql`
       heroRegular
       heroSmall
       copy
+      seo {
+        title
+        description
+      }
       suitableFor {
         id
         area
