@@ -25,6 +25,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.8.0",
     "react-iframe": "^1.8.0",
+    "react-lazy-load": "^3.0.13",
     "tailwindcss-transitions": "^2.1.0"
   },
   "devDependencies": {

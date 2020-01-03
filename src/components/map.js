@@ -1,5 +1,6 @@
 import React from "react"
 import Iframe from 'react-iframe'
+import LazyLoad from 'react-lazy-load'
 
 const Map = () => {
 
@@ -21,14 +22,17 @@ const Map = () => {
         className="hidden lg:block absolute w-full h-full left-0 right-0 top-0 bottom-0 gradient-blue opacity-50 cursor-pointer z-50"
       ></div>
 
-      <Iframe url="https://www.google.com/maps/d/u/0/embed?mid=1UX4vosw-XYLDC5Xv47fICUQdMpBZpcjz"
-        width="100%"
-        height="480px"
-        display="initial"
-        position="relative"
-        title="Where we've worked"
-        />
+      <LazyLoad height={480} offsetVertical={300}>
 
+        <Iframe url="https://www.google.com/maps/d/u/0/embed?mid=1UX4vosw-XYLDC5Xv47fICUQdMpBZpcjz"
+          width="100%"
+          height="480px"
+          display="initial"
+          position="relative"
+          title="Where we've worked"
+          />
+
+      </LazyLoad>
     </>
   )
 }
