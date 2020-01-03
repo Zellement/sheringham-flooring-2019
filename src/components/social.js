@@ -6,7 +6,7 @@ const Social = ( {className} ) => {
 
     return (
         <>
-            <a className={"inline-block my-2 " + className} rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/sheringhamflooring/">
+            <a aria-label="Find us on Facebook" className={"inline-block my-2 " + className} rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/sheringhamflooring/">
                 <IconContext.Provider value={{ size: '2em', color: "white" }}>
                     <div>
                         <FaFacebookSquare />

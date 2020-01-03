@@ -87,6 +87,7 @@ class GalleryCarousel extends Component {
                 transition="easeInOut"
                 className="absolute cursor-pointer mt-1 mr-1 top-0 left-0 p-1 font-bold text-2xl text-yellow font-serif appearance-none focus:outline-none z-10"
                 onClick={() => this.embla.scrollPrev()}
+                aria-label="Previous image"
               >
                 <IoIosArrowDropleftCircle />
               </motion.button>
@@ -95,6 +96,7 @@ class GalleryCarousel extends Component {
                 transition="easeInOut"
                 className="absolute cursor-pointer mt-1 mr-1 top-0 right-0 2xl:-mr-6 font-bold text-yellow text-2xl appearance-none focus:outline-none z-10"
                 onClick={() => this.embla.scrollNext()}
+                aria-label="Next image"
               >
                 <IoIosArrowDroprightCircle />
               </motion.button>

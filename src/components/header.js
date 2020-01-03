@@ -10,7 +10,7 @@ const Header = () => (
     
     <div className="container">
       <div className="flex flex-col md:flex-row items-start mb-4 justify-between">
-        <Link to="/">
+        <Link aria-label="Home page" to="/">
           <Logo />
         </Link>
         <div className="text-center flex md:text-right self-center pt-4 md:p-0">
