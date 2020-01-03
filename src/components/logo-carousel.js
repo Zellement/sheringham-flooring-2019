@@ -48,7 +48,7 @@ class LogoCarousel extends Component {
           {!this.state.isLoading ? (
             
             <motion.div
-            className="container lg:flex my-4 lg:my-8 px-4 lg:px-8"
+            className="container lg:flex my-12 px-4 lg:px-8"
             variants={item}
             transition="easeInOut"
           >
