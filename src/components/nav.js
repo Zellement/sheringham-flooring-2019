@@ -71,7 +71,7 @@ const Nav = class extends React.Component {
             </li>
           </ul>
 
-          <Social />
+          <Social className="md:hidden" />
         </div>
         <div role="button" tabIndex="0" className={`${burgerActive} navigation-button`} onClick={this.toggleMenu} onKeyDown={this.toggleMenu}>
           <div className={`navigation-button__inside ${burgerActive}`}>

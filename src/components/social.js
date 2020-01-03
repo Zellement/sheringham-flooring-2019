@@ -2,11 +2,11 @@ import React from "react"
 import { FaFacebookSquare } from 'react-icons/fa'
 import { IconContext } from "react-icons"
 
-const Social = () => {
+const Social = ( {className} ) => {
 
     return (
         <>
-            <a className="inline-block my-2" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/sheringhamflooring/">
+            <a className={"inline-block my-2 " + className} rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/sheringhamflooring/">
                 <IconContext.Provider value={{ size: '2em', color: "white" }}>
                     <div>
                         <FaFacebookSquare />

@@ -6,7 +6,7 @@ import Phone from '../components/phone'
 import { FaPhone } from "react-icons/fa";
 
 const Header = () => (
-  <header className="py-2 pl-2 md:py-8 md:px-2">
+  <header className="py-2 pl-2 md:pt-8 md:px-2">
     
     <div className="container">
       <div className="flex flex-col md:flex-row items-start mb-4 justify-between">
