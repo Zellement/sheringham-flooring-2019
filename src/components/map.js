@@ -24,8 +24,6 @@ const Map = () => {
       <Iframe url="https://www.google.com/maps/d/u/0/embed?mid=1UX4vosw-XYLDC5Xv47fICUQdMpBZpcjz"
         width="100%"
         height="480px"
-        id="myId"
-        className="myClassname"
         display="initial"
         position="relative"
         title="Where we've worked"
