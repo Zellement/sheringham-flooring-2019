@@ -68,14 +68,12 @@ const IndexPage = ({ data }) => {
           className="relative my-4 lg:my-8"
         >
 
-          <WhyChooseUs containerClass="md:flex-row" />
+        <WhyChooseUs containerClass="md:flex-row" />
 
         </motion.div>
 
-        <motion.div
+        <div
           className="sm:bg-blue-dark my-4 lg:my-8"
-          variants={item}
-          transition="easeInOut"
         >
 
           <div className="container flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
@@ -92,12 +90,10 @@ const IndexPage = ({ data }) => {
 
           </div>
 
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           className="my-4 lg:my-8 content"
-          variants={item}
-          transition="easeInOut"
         >
 
           <div className="relative overflow-hidden">
@@ -114,21 +110,19 @@ const IndexPage = ({ data }) => {
 
           </div>
 
-        </motion.div>
+        </div>
 
         <LogoCarousel
           images={post.logos}
         />
 
-        <motion.div
+        <div
           className="relative my-4 lg:my-8"
-          variants={item}
-          transition="easeInOut"
         >
 
           <Map />
 
-        </motion.div>
+        </div>
 
       </motion.section>
     </>
