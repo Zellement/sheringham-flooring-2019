@@ -8,6 +8,7 @@ import Hero from "../components/hero"
 import LogoCarousel from "../components/logo-carousel"
 import Map from "../components/map"
 import GreatFor from "../components/great-for"
+import Testimonial from "../components/testimonial"
 
 const duration = 0.35
 
@@ -88,6 +89,7 @@ const ServicePage = ({ data }) => {
               <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8 lg:m-0 lg:w-3/5 xl:px-0" content={post.copy} />
 
               <div className="lg:w-2/5">
+                <Testimonial content={post.testimonial} />
                 <WhyChooseUs containerClass="md:flex-col" />
               </div>
 
@@ -126,6 +128,11 @@ export const query = graphql`
       heroRegular
       heroSmall
       copy
+      testimonial {
+        name
+        testimonial
+        subtitle
+      }
       seo {
         title
         description
