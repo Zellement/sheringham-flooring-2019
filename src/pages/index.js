@@ -32,6 +32,8 @@ const item = {
 
 const IndexPage = ({ data }) => {
 
+  console.log(data)
+
   const post = data.datoCmsHomePage
 
   return (
