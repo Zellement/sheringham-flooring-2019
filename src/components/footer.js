@@ -39,9 +39,9 @@ const Footer = () => {
 
           <p><span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> {getYear + " " + data.site.siteMetadata.title}</p>
 
-        </div>
+          <p><a href="https://www.zellement.com">Web Design by Zellement</a></p>
 
-        <p><a href="https://www.zellement.com">Web Design by Zellement</a></p>
+        </div>
 
       </footer>
 
