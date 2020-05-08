@@ -9,6 +9,7 @@ module.exports = {
     mobile: '07760 478 192',
     address: 'Unit 31, Weybourne Road Industrial Est, Weybourne Road, Sheringham, Norfolk, NR26 8AF',
     email: 'info@sheringhamflooring.com',
+    siteUrl: 'https://www.sheringhamflooring.com'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,6 +20,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-datocms`,
       options: {

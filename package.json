@@ -17,6 +17,7 @@
     "gatsby-plugin-postcss": "^2.3.1",
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sharp": "^2.6.2",
+    "gatsby-plugin-sitemap": "^2.4.2",
     "gatsby-source-datocms": "^2.2.1",
     "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-sharp": "^2.5.2",
