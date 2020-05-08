@@ -30,7 +30,7 @@ const Footer = () => {
 
           <p className="mb-4">
             <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.phone}>T: {data.site.siteMetadata.phone}</a><br />
-            <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.phone}>M: {data.site.siteMetadata.mobile}</a>
+            <a rel="nofollow, noindex" className="text-blue-mid" href={"tel:" + data.site.siteMetadata.mobile}>M: {data.site.siteMetadata.mobile}</a>
           </p>
 
           <p className="mb-4">A: {data.site.siteMetadata.address}</p>

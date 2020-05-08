@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
 
             {post.buckets.map(bucketData => (
 
-              <Link key={bucketData.id} className="flex flex-col p-6 diagonal-stripes-grey block sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 lg:hover:-mt-16 transition" to={bucketData.link}>
+              <Link key={bucketData.id} className="flex flex-col p-6 diagonal-stripes-grey block sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 transform hover:-translate-y-4" to={bucketData.link}>
 
                 <Img className="w-full" fluid={bucketData.image.fluid} />
                 <span className="text-2xl text-blue-dark font-bold text-right sm:text-white lg:text-lg xl:text-2xl">{bucketData.title} &raquo;</span>
