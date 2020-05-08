@@ -77,11 +77,11 @@ export default class Contact extends React.Component {
               </label>
               <label className="relative flex w-full p-1">
                 <input className="flex-grow p-4 bg-gray-300 rounded-lg" placeholder="Email or telephone" type="text" name="email_telephone" onChange={this.handleChange} />
-                {this.validator.message('email_telephone', this.state.email, 'required')}
+                {this.validator.message('email_telephone', this.state.email_telephone, 'required')}
               </label>
               <label className="relative flex w-full p-1">
                 <textarea className="flex-grow p-4 bg-gray-300 rounded-lg" placeholder="Details" type="text" name="details" onChange={this.handleChange} />
-               {this.validator.message('details', this.state.telephone, 'required')}
+               {this.validator.message('details', this.state.details, 'required')}
               </label>
               <span className="w-full p-1">
                 <button className="w-full p-0 rounded-lg btn bg-yellow text-orange-semidark" type="submit"><span className="block p-4 whitespace-no-wrap">Get in touch</span></button>
