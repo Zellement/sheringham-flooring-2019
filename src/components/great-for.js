@@ -22,8 +22,6 @@ const item = {
 
 const GreatFor = ({ chosen }) => {
 
-    //console.log(chosen)
-
     if (chosen.length > 0) {
 
         return (
@@ -36,9 +34,9 @@ const GreatFor = ({ chosen }) => {
 
                     <div className="my-4 lg:my-8">
 
-                        <p className="text-center text-blue-dark mb-4 text-xl lg:text-2xl">Great for...</p>
+                        <p className="mb-4 text-xl text-center text-blue-dark lg:text-2xl">Great for...</p>
 
-                        <div className="flex flex-row flex-wrap align-center space-around justify-center">
+                        <div className="flex flex-row flex-wrap justify-center align-center space-around">
 
                             {chosen.map(suitableForData => (
 
@@ -46,11 +44,11 @@ const GreatFor = ({ chosen }) => {
                                     key={suitableForData.id}
                                     variants={item}
                                     transition="easeInOut"
-                                    className="w-1/2 p-4 flex flex-col text-center relative sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/12"
+                                    className="relative flex flex-col w-1/2 p-4 text-center sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/12"
                                 >
 
-                                    <div className="absolute -z-10 opacity-25 top-1/2 bg-boxes left-1/2 bg-blue-mid rounded-lg w-50px h-50px"></div>
-                                    <img className="w-50px h-50px opacity-50 block mx-auto" alt={suitableForData.area} src={suitableForData.image.url} />
+                                    <div className="absolute rounded-lg opacity-25 -z-10 top-1/2 bg-boxes left-1/2 bg-blue-mid w-50px h-50px"></div>
+                                    <img className="block mx-auto opacity-50 w-50px h-50px" alt={suitableForData.area} src={suitableForData.image.url} />
                                     <p className="mt-2">{suitableForData.area}</p>
 
                                 </motion.div>

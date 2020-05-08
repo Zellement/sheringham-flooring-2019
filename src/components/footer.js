@@ -23,7 +23,7 @@ const Footer = () => {
   `)
   return (
     <>
-      <footer className="bg-blue-dark text-blue-mid mt-6 p-10 pb-20 md:py-16">
+      <footer className="p-10 pb-20 mt-6 bg-blue-dark text-blue-mid md:py-16">
 
         <div className="container">
           <Social />
@@ -40,6 +40,8 @@ const Footer = () => {
           <p><span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> {getYear + " " + data.site.siteMetadata.title}</p>
 
         </div>
+
+        <p><a href="https://www.zellement.com">Web Design by Zellement</a></p>
 
       </footer>
 

@@ -30,9 +30,7 @@ const item = {
 }
 
 
-const IndexPage = ({ data, data2 }) => {
-
-  console.log(data)
+const ContactPage = ({ data }) => {
 
   const post = data.datoCmsContactPage
 
@@ -112,7 +110,7 @@ const IndexPage = ({ data, data2 }) => {
   )
 }
 
-export default IndexPage
+export default ContactPage
 
 export const query = graphql`
 query ContactQuery {

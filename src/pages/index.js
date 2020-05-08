@@ -32,8 +32,6 @@ const item = {
 
 const IndexPage = ({ data }) => {
 
-  console.log(data)
-
   const post = data.datoCmsHomePage
 
   return (
@@ -75,17 +73,17 @@ const IndexPage = ({ data }) => {
         </motion.div>
 
         <div
-          className="sm:bg-blue-dark my-4 lg:my-8"
+          className="my-4 sm:bg-blue-dark lg:my-8"
         >
 
           <div className="container flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
 
             {post.buckets.map(bucketData => (
 
-              <Link key={bucketData.id} className="flex flex-col p-6 diagonal-stripes-grey block sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 transform hover:-translate-y-4" to={bucketData.link}>
+              <Link key={bucketData.id} className="flex flex-col block p-6 transform diagonal-stripes-grey sm:w-1/2 lg:w-auto lg:flex-1 lg:mx-2 lg:-mt-12 hover:-translate-y-4" to={bucketData.link}>
 
                 <Img className="w-full" fluid={bucketData.image.fluid} />
-                <span className="text-2xl text-blue-dark font-bold text-right sm:text-white lg:text-lg xl:text-2xl">{bucketData.title} &raquo;</span>
+                <span className="text-2xl font-bold text-right text-blue-dark sm:text-white lg:text-lg xl:text-2xl">{bucketData.title} &raquo;</span>
 
               </Link>
             ))}
@@ -100,11 +98,11 @@ const IndexPage = ({ data }) => {
 
           <div className="relative overflow-hidden">
 
-            <div className="diagonal-stripes-grey -z-10 absolute h-full mt-48 w-full lg:w-3/5 lg:mt-0 lg:right-0"></div>
+            <div className="absolute w-full h-full mt-48 diagonal-stripes-grey -z-10 lg:w-3/5 lg:mt-0 lg:right-0"></div>
 
             <div className="container flex flex-col lg:flex-row lg:justify-between">
 
-              <HTMLContent className="p-6 max-w-xl mx-auto mb-10 lg:w-1/2 lg:p-8 lg:m-0 xl:px-0" content={post.copy} />
+              <HTMLContent className="max-w-xl p-6 mx-auto mb-10 lg:w-1/2 lg:p-8 lg:m-0 xl:px-0" content={post.copy} />
 
               <Img className="w-full lg:w-1/2 lg:my-8" fluid={post.copyImage.fluid} />
 
