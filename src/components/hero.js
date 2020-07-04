@@ -8,14 +8,14 @@ const Hero = ({ heroBold, heroRegular, heroSmall, carouselImgs }) => {
 
         return (
             <>
-                <div className="flex flex-col relative md:flex-row">
+                <div className="relative flex flex-col md:flex-row">
 
-                    <div className="absolute top-0 right-0 left-0 bottom-0 h-100 w-full md:w-4/6 md:rounded-br-xl md:rounded-tr-xl diagonal-stripes-white opacity-50 -z-10"></div>
-                    <div className="absolute top-0 right-0 left-0 bottom-0 h-100 w-full md:w-4/6 md:rounded-br-xl md:rounded-tr-xl gradient-blue-2  -z-20"></div>
+                    <div className="absolute top-0 bottom-0 left-0 right-0 w-full opacity-50 h-100 md:w-4/6 md:rounded-br-xl md:rounded-tr-xl diagonal-stripes-white -z-10"></div>
+                    <div className="absolute top-0 bottom-0 left-0 right-0 w-full h-100 md:w-4/6 md:rounded-br-xl md:rounded-tr-xl gradient-blue-2 -z-20"></div>
 
-                    <div className="text-center flex-1 m-auto p-8 md:text-left md:w-1/2 lg:p-12 xl:p-16">
+                    <div className="flex-1 p-8 m-auto text-center md:text-left md:w-1/2 lg:p-12 xl:p-16">
 
-                        <div className="flex flex-col m-auto self-center">
+                        <div className="flex flex-col self-center m-auto">
 
                             <p className="hero__heading">
                                 <span className="hero__bold">{heroBold} </span>
@@ -46,14 +46,14 @@ const Hero = ({ heroBold, heroRegular, heroSmall, carouselImgs }) => {
 
         return (
             <>
-                <div className="flex flex-col md:flex-row relative">
+                <div className="relative flex flex-col md:flex-row">
 
-                    <div className="absolute top-0 right-0 left-0 bottom-0 h-100 w-full md:w-4/6 md:rounded-br-xl md:rounded-tr-xl diagonal-stripes-white opacity-50 -z-10"></div>
-                    <div className="absolute top-0 right-0 left-0 bottom-0 h-100 w-full md:w-4/6 md:rounded-br-xl md:rounded-tr-xl gradient-blue-2  -z-20"></div>
+                    <div className="absolute top-0 bottom-0 left-0 right-0 w-full opacity-50 h-100 md:w-4/6 md:rounded-br-xl md:rounded-tr-xl diagonal-stripes-white -z-10"></div>
+                    <div className="absolute top-0 bottom-0 left-0 right-0 w-full h-100 md:w-4/6 md:rounded-br-xl md:rounded-tr-xl gradient-blue-2 -z-20"></div>
 
-                    <div className="text-center flex-1 m-auto p-8 md:text-left md:w-1/2 lg:p-12 xl:p-16">
+                    <div className="flex-1 p-8 m-auto text-center md:text-left md:w-1/2 lg:p-12 xl:p-16">
 
-                        <div className="flex flex-col m-auto self-center">
+                        <div className="flex flex-col self-center m-auto">
 
                             <p className="hero__heading">
                                 <span className="hero__bold">{heroBold} </span>
@@ -67,7 +67,7 @@ const Hero = ({ heroBold, heroRegular, heroSmall, carouselImgs }) => {
 
                     <div id="imageHolder" className="md:w-1/2 md:flex-1 md:py-4 hero__image-container xl:py-8">
 
-                        <Img
+                        <Img loading="eager"
                             fluid={carouselImgs[0].fluid}
                         />
 
